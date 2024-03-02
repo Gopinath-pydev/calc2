@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'main1.css' %}">
+</head>
+<body bgcolor="cyan">
+    Hello all!
+    <div class="center">
+        <h1>Calculator App</h1>
+    <form action="result", method="post">
+       {% csrf_token %}
+        ENTER Number 1: <input type="text", name="num1">
+        <br>
+        <br>
+        ENTER Number 2: <input type="text", name="num2">
+        <br>
+        <br>
+        <select name="operation">
+            <option>add</option>
+            <option>sub</option>
+            <option>mul</option>
+            <option>div</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit">submit</button>
+    </form>
+    </div>
+</body>
+</html>
