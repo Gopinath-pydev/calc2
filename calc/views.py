@@ -1,8 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import userProp
 
 def home(request):
     content = {'name': "Deena"}
+    obj = userProp.objects.filter(name='python')
+    print(obj)
     return render(request, 'home.html', content)
 
 
